@@ -1,6 +1,8 @@
 import java.util
 import java.util.{Collections, Date}
 
+import scala.collection.mutable.ListBuffer
+
 object Demo {
   def main(args: Array[String]): Unit = {
 
@@ -119,9 +121,115 @@ object Demo {
     for(e <- col){
       println(e.name)
     }
+    println("--------------------------------------")
 
+    col.map(e=> e.name.length).foreach(len=> println(len))
 
 //    println(employee1.compareObject(employee1,employee2))
+
+    println("--------------------------------------")
+
+    /* Conditional Statement Usage */
+
+   var name1:String="Hemendra Singh Chouhan"
+
+    if(name1.length>5){
+
+      println(name1.length)
+    }else{
+
+      print(name1+" : length is smaller")
+
+    }
+    println("--------------------------------------")
+    /* Loops */
+
+    var num11=1;
+    while(num11<10){
+
+      println(num11)
+      num11 = num11 + 1
+    }
+
+    println("--------------------------------------")
+
+    var j=2;
+
+    for(i<- 0 to 10){
+
+      println(i*j)
+
+    }
+
+    println("--------------------------------------")
+
+    for(k <- 1 until 10){
+
+      println(k)
+
+    }
+
+    println("--------------------------------------")
+
+    var p1:Person1 = new Person1(101,"Hemendra Singh Chouhan","M","India","Madhya Pradesh", "Indore")
+    var p2:Person1 = new Person1(102,"Aditi Singh Chouhan","F","India","Madhya Pradesh", "Indore")
+    var p3:Person1 = new Person1(103,"Nisha Singh Chouhan","F","India","Madhya Pradesh", "Indore")
+    var p4:Person1 = new Person1(104,"Subhash Singh Chouhan","M","India","Madhya Pradesh", "Indore")
+    var p5:Person1 = new Person1(105,"Sunny Singh Chouhan","M","India","Madhya Pradesh", "Indore")
+
+    /* Loop Variations */
+
+    var list = List(p1,p2,p3,p4,p5);
+    for(i<- list){
+      println(i.name+":"+i.gender)
+
+    }
+
+    println("--------------------------------------")
+
+    list.foreach(p=>println(p.name))
+
+    println("--------------------------------------")
+
+    for(i<- list if i.gender.equalsIgnoreCase("F")){
+      println(i.name+":"+i.gender)
+
+    }
+    println("--------------------------------------")
+
+    /* Anonymous Function */
+
+    var result1= (a:Int,b:Int)=> a+b
+    println(result1(10,20))
+
+    var test1= (str:String)=> str.length
+
+
+    println("--------------------------------------")
+
+    println(test1("hemendra"))
+
+    println("--------------------------------------")
+
+    /* Dealing with Collections */
+
+    var nums=Set() //empty set
+
+    var set2example = Set(10,10,20,30,40,50)
+
+    for(i<- set2example){
+
+      println(i)
+
+    }
+    println("--------------------------------------")
+
+    println(set2example.head) //gets the element which is at the first place.
+
+    println(set2example.tail) //returns all element except first element.
+
+    println(set2example.isEmpty) //tells whether the collection is empty or not.
+
 
 
   }

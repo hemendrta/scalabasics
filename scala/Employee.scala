@@ -1,5 +1,8 @@
+/*Creating a class*/
+
 class Employee(var name:String, var email:String) {
 
+    /*creating a function with boolean return type*/
 
     def compareObject(s1:Employee,s2:Employee):Boolean = {
 
@@ -11,6 +14,6 @@ class Employee(var name:String, var email:String) {
 
     }
 
-
+    /*ToString Implentation*/
     override def toString = s"Employee($name, $email)"
 }
